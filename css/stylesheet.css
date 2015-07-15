@@ -17,6 +17,10 @@ header, nav, section, .page-wrapper, body {
     color: snow !important;
 }
 
+.txt-center {
+    text-align: center;
+}
+
 
 
 
