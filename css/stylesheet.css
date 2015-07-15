@@ -21,7 +21,9 @@ header, nav, section, .page-wrapper, body {
     text-align: center;
 }
 
-
+#inverse {
+    color: green;
+}
 
 
 /***************
@@ -94,9 +96,36 @@ COLUMNS
 .bg-color
 ****************/
 
-.bg-red {
-    background-color: tomato;
+.bg-green {
+    background-color: rgba(35, 209, 93, 0.8);
 }
+.bg-blue {
+    background-color: rgba(43, 99, 255, 0.8);
+}
+.bg-red {
+    background-color: rgba(239, 59, 59, 0.8);
+}
+.bg-yellow {
+    background-color: rgba(234, 234, 46, 0.8);
+}
+
+/***************
+.bg-color-light
+****************/
+
+.bg-green-light {
+    background-color: rgba(35, 209, 93, 0.2);
+}
+.bg-blue-light {
+    background-color: rgba(43, 99, 255, 0.2);
+}
+.bg-red-light {
+    background-color: rgba(239, 59, 59, 0.2);
+}
+.bg-yellow-light {
+    background-color: rgba(234, 234, 46, 0.2);
+}
+
 
 /***************
 .bg-color-grad
