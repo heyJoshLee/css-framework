@@ -347,6 +347,17 @@ section {
     margin: 0 auto;
 }
 
+/***********
+list
+**********/
+ul li {
+    list-style: none;
+}
+
+.inline-list li {
+    display: inline-block;
+}
+
 
 /*******
 .jumbotron
