@@ -1,24 +1,23 @@
 var themeColor = "128,129,157";
+
+
+
 var themeColorArray = themeColor.split(",");
 
-var lighter = (parseInt(themeColorArray[0]) + 80).toString() + "," + (parseInt(themeColorArray[1]) + 65).toString() + ","+ (parseInt(themeColorArray[2]) + 52).toString();
-
-var light = (parseInt(themeColorArray[0]) + 33).toString() + "," + (parseInt(themeColorArray[1]) + 29).toString() + ","+ (parseInt(themeColorArray[2]) + 24).toString();
-
-var main = themeColorArray[0].toString() + "," + themeColorArray[1].toString() + ","+ themeColorArray[2].toString();
-
-var dark = (parseInt(themeColorArray[0]) - 25).toString() + "," + (parseInt(themeColorArray[1]) - 17).toString() + ","+ (parseInt(themeColorArray[2]) - 11).toString();
-
-var darker = (parseInt(themeColorArray[0]) - 16).toString() + "," + (parseInt(themeColorArray[1]) - 25).toString() + ","+ (parseInt(themeColorArray[2]) - 32).toString();
+var themeColors = {
+  lighter: (parseInt(themeColorArray[0]) + 80).toString() + "," + (parseInt(themeColorArray[1]) + 65).toString() + ","+ (parseInt(themeColorArray[2]) + 52).toString(),
+  light: (parseInt(themeColorArray[0]) + 33).toString() + "," + (parseInt(themeColorArray[1]) + 29).toString() + ","+ (parseInt(themeColorArray[2]) + 24).toString(),
+  main: themeColorArray[0].toString() + "," + themeColorArray[1].toString() + ","+ themeColorArray[2].toString(),
+  dark: (parseInt(themeColorArray[0]) - 25).toString() + "," + (parseInt(themeColorArray[1]) - 17).toString() + ","+ (parseInt(themeColorArray[2]) - 11).toString(),
+  darker: (parseInt(themeColorArray[0]) - 16).toString() + "," + (parseInt(themeColorArray[1]) - 25).toString() + ","+ (parseInt(themeColorArray[2]) - 32).toString()
+}
 
 
-console.log(lighter);
-
-$(".lighter").css("background-color", "rgb(" + lighter + ")");
-$(".light").css("background-color", "rgb(" + light + ")");
-$(".main").css("background-color", "rgb(" + main + ")");
-$(".dark").css("background-color", "rgb(" + dark + ")");
-$(".darker").css("background-color", "rgb(" + darker + ")");
+$(".lighter").css("background-color", "rgb(" + themeColors.lighter + ")");
+$(".light").css("background-color", "rgb(" + themeColors.light + ")");
+$(".main").css("background-color", "rgb(" + themeColors.main + ")");
+$(".dark").css("background-color", "rgb(" + themeColors.dark + ")");
+$(".darker").css("background-color", "rgb(" + themeColors.darker + ")");
 
 
 
