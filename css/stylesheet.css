@@ -8,15 +8,8 @@ MAIN CSS
     --main-bg-color: red;
 }
 
-
-
 header, nav, section, .page-wrapper, body {
  margin: 0 auto;   
-}
-
-
-* {
-    color: rgba(20, 20, 20, 1);
 }
 
 .txt-white {
@@ -209,7 +202,7 @@ COLUMNS
 .bg-yellow-grad {
     background: #f2f288; /* Old browsers */
     background: -moz-linear-gradient(top,  #f2f288 0%, #e6e939 30%, #e6e939 30%, #e3ea24 49%, #b9cb17 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f288), color-stop(30%,#e6e939), color-stop(30%,#e6e939), color-stop(49%,#e3ea24), color-stop(100%,#b9cb17)); /* Chrome,Safari4+ */
+    background: -web-gradient(linear, left top, left bottom, color-stop(0%,#f2f288), color-stop(30%,#e6e939), color-stop(30%,#e6e939), color-stop(49%,#e3ea24), color-stop(100%,#b9cb17)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top,  #f2f288 0%,#e6e939 30%,#e6e939 30%,#e3ea24 49%,#b9cb17 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top,  #f2f288 0%,#e6e939 30%,#e6e939 30%,#e3ea24 49%,#b9cb17 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top,  #f2f288 0%,#e6e939 30%,#e6e939 30%,#e3ea24 49%,#b9cb17 100%); /* IE10+ */
