@@ -21,8 +21,9 @@ header, nav, section, .page-wrapper, body {
     text-align: center;
 }
 
-#inverse {
-    color: green;
+.break {
+    display: block;
+    margin-bottom: 10px;
 }
 
 
@@ -279,8 +280,10 @@ COLUMNS
 form
 ****************/
 
-input {
+input[type="text"] {
     background-color: snow;
+    height: 30px;
+    width: 50%;
 }
 
 textarea {
@@ -291,6 +294,12 @@ textarea {
     -moz-border-radius-topleft: 0;
     border-radius: 10px;
     border-top-left-radius: 0;
+}
+
+form input,
+form textarea {
+    display: block;
+    margin: 0 auto 10px;
 }
 
 
@@ -334,7 +343,7 @@ section {
 .center
 *********/
 
-.center-div {
+.div-center {
     margin: 0 auto;
 }
 
