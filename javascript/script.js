@@ -1,9 +1,12 @@
-var themeColor = "128,129,157";
 
 
 
-var themeColorArray = themeColor.split(",");
 
+if ($("#page-wrapper").hasClass("useThemes")) {
+  themeColor =  $("#page-wrapper").attr("class").split(" ")[1].replace("theme-", "");
+  var themeColor;
+  var themeColorArray = themeColor.split(",");
+// Calculate the color pallete
 var themeColors = {
   lighter: (parseInt(themeColorArray[0]) + 80).toString() + "," + (parseInt(themeColorArray[1]) + 65).toString() + ","+ (parseInt(themeColorArray[2]) + 52).toString(),
   light: (parseInt(themeColorArray[0]) + 33).toString() + "," + (parseInt(themeColorArray[1]) + 29).toString() + ","+ (parseInt(themeColorArray[2]) + 24).toString(),
@@ -11,6 +14,13 @@ var themeColors = {
   dark: (parseInt(themeColorArray[0]) - 25).toString() + "," + (parseInt(themeColorArray[1]) - 17).toString() + ","+ (parseInt(themeColorArray[2]) - 11).toString(),
   darker: (parseInt(themeColorArray[0]) - 16).toString() + "," + (parseInt(themeColorArray[1]) - 25).toString() + ","+ (parseInt(themeColorArray[2]) - 32).toString()
 }
+
+
+
+
+} 
+
+
 
 
 $(".lighter").css("background-color", "rgb(" + themeColors.lighter + ")");
