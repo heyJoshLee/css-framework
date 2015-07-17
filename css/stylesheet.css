@@ -12,6 +12,27 @@ header, nav, section, .page-wrapper, body {
  margin: 0 auto;   
 }
 
+
+
+.break {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+.div-center {
+    margin: 0 auto;
+}
+
+
+/*************
+txt
+**************/
+
+.quiet {
+    font-size: .8rem;
+}
+
 .txt-white {
     color: snow !important;
 }
@@ -23,20 +44,6 @@ header, nav, section, .page-wrapper, body {
 .txt-center {
     text-align: center;
 }
-
-.break {
-    display: block;
-    margin-bottom: 10px;
-}
-
-/*************
-txt
-**************/
-
-.quiet {
-    font-size: .8rem;
-}
-
 
 /***************
 ROW
@@ -319,14 +326,6 @@ input[type="submit"] {
 }
 
 
-
-/*******
-.center
-*********/
-
-.div-center {
-    margin: 0 auto;
-}
 
 /***********
 list
