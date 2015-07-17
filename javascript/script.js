@@ -18,7 +18,6 @@ if ($("#page-wrapper").hasClass("useThemes")) {
       }
       themeColor = hexToRgb(themeColor).r + "," + hexToRgb(themeColor).g + "," + hexToRgb(themeColor).b ;
       themeColorHex = themeColor;
-      console.log(themeColor);
   }
   
   var themeColorArray = themeColor.split(",");
@@ -49,140 +48,90 @@ if ($("#page-wrapper").hasClass("useThemes")) {
   $(".darker").css("background-color", "rgb(" + themeColors.darker + ")");
 
 
-} 
+} // If end
 
+  var gradHelper = [
+                {
+                selector: ".lighter-grad",
+                colors: themeColors.lighter,
+                array: themeColors.lighterGradArray 
+                }, 
+                {
+                selector: ".light-grad",
+                colors: themeColors.light,
+                array: themeColors.lightGradArray 
+                },
+                {
+                selector: ".main-grad",
+                colors: themeColors.main,
+                array: themeColors.mainGradArray
+                },
+                {
+                selector: ".dark-grad",
+                colors: themeColors.main,
+                array: themeColors.darkGradArray
+                },
+                {
+                selector: ".darker-grad",
+                colors: themeColors.darker,
+                array: themeColors.darkerGradArray
+                }
+                ];
+  // Subtract values
+  var sv = [10,20,30,40];
+  var r, g, b;
+  var counter = 0;
+  for (counter; counter < gradHelper.length; counter += 1) {
+    r = gradHelper[counter]["array"][0];
+    g = gradHelper[counter]["array"][1];
+    b = gradHelper[counter]["array"][2];
 
-console.log(navigator.appCodeName)
-
-
-  // Background Gradients  245,141,133  237,68,53     237,68,53     238,53,32   207,50,19)
-  //    
-  
-  // .lighter                                                                                                    -8 - 73 -80    -8 -73 -80   -7 -88 -101  -38 -91 -114
-  var r = themeColors.lighterGradArray[0];
-  var g = themeColors.lighterGradArray[1];
-  var b = themeColors.lighterGradArray[2];
-  
-  $(".lighter-grad").css({"background": "-webkit-linear-gradient(top," +  "rgb(" + themeColors.lighter + ") 0%, " + 
-    "rgb(" + (r - 10).toString() + "," + (g - 10).toString() + "," + (b - 10).toString() + ") 30%," + 
-    "rgb(" + (r - 20).toString() + "," + (g- 20).toString() + "," + (b - 20).toString() + ") 50%," + 
-    "rgb(" + (r - 30).toString() + "," + (g - 30).toString() + "," + (b - 30).toString() + ") 70%," + 
-    "rgb(" + (r - 40).toString() + "," + (g - 40).toString() + "," + (b - 40).toString() + ") 90%)",
-  });
-  $(".lighter-grad").css({"background": "-moz-linear-gradient(top," +  "rgb(" + themeColors.lighter + ") 0%, " + 
-    "rgb(" + (r - 8).toString() + "," + (g - 73).toString() + "," + (b - 80).toString() + ") 30%," + 
-    "rgb(" + (r - 8).toString() + "," + (g- 73).toString() + "," + (b - 80).toString() + ") 30%," + 
-    "rgb(" + (r - 7).toString() + "," + (g - 88).toString() + "," + (b - 101).toString() + ") 49%," + 
-    "rgb(" + (r - 38).toString() + "," + (g - 91).toString() + "," + (b  -114).toString() + ") 100%)",
-  });
-
-  // .light
-
-  r = themeColors.lightGradArray[0];
-  g = themeColors.lightGradArray[1];
-  b = themeColors.lightGradArray[2];
-  console.log(themeColors.lightGradArray);
-
-  $(".light-grad").css({"background": "-webkit-linear-gradient(top," +  "rgb(" + themeColors.lighter + ") 0%, " + 
-    "rgb(" + (r - 8).toString() + "," + (g - 73).toString() + "," + (b - 80).toString() + ") 50%," + 
-    "rgb(" + (r - 8).toString() + "," + (g- 73).toString() + "," + (b - 80).toString() + ") 50%," + 
-    "rgb(" + (r - 7).toString() + "," + (g - 88).toString() + "," + (b - 101).toString() + ") 59%," + 
-    "rgb(" + (r - 38).toString() + "," + (g - 91).toString() + "," + (b  -114).toString() + ") 100%)",
-  });
-  $(".light-grad").css({"background": "-moz-linear-gradient(top," +  "rgb(" + themeColors.lighter + ") 0%, " + 
-    "rgb(" + (r - 8).toString() + "," + (g - 73).toString() + "," + (b - 80).toString() + ") 50%," + 
-    "rgb(" + (r - 8).toString() + "," + (g- 73).toString() + "," + (b - 80).toString() + ") 50%," + 
-    "rgb(" + (r - 7).toString() + "," + (g - 88).toString() + "," + (b - 101).toString() + ") 59%," + 
-    "rgb(" + (r - 38).toString() + "," + (g - 91).toString() + "," + (b  -114).toString() + ") 100%)",
-  });
-
-  // .main
-
-  r = themeColors.mainGradArray[0];
-  g = themeColors.mainGradArray[1];
-  b = themeColors.mainGradArray[2];
-  console.log(themeColors.mainGradArray);
-
- $(".main-grad").css({"background": "-webkit-linear-gradient(top," +  "rgb(" + themeColors.main + ") 0%, " + 
-    "rgb(" + (r - 10).toString() + "," + (g - 10).toString() + "," + (b - 10).toString() + ") 30%," + 
-    "rgb(" + (r - 20).toString() + "," + (g- 20).toString() + "," + (b - 20).toString() + ") 50%," + 
-    "rgb(" + (r - 30).toString() + "," + (g - 30).toString() + "," + (b - 30).toString() + ") 70%," + 
-    "rgb(" + (r - 40).toString() + "," + (g - 40).toString() + "," + (b - 40).toString() + ") 90%)",
-  });
-  $(".light-grad").css({"background": "-moz-linear-gradient(top," +  "rgb(" + themeColors.main + ") 0%, " + 
-    "rgb(" + (r - 8).toString() + "," + (g - 73).toString() + "," + (b - 80).toString() + ") 30%," + 
-    "rgb(" + (r - 8).toString() + "," + (g- 73).toString() + "," + (b - 80).toString() + ") 30%," + 
-    "rgb(" + (r - 7).toString() + "," + (g - 88).toString() + "," + (b - 101).toString() + ") 49%," + 
-    "rgb(" + (r - 38).toString() + "," + (g - 91).toString() + "," + (b  -114).toString() + ") 100%)",
-  });
-
-  // .dark
-
-  r = themeColors.darkGradArray[0];
-  g = themeColors.darkGradArray[1];
-  b = themeColors.darkGradArray[2];
-  console.log(themeColors.darkGradArray);
-
-  $(".dark-grad").css({"background": "-webkit-linear-gradient(top," +  "rgb(" + themeColors.dark + ") 0%, " + 
-    "rgb(" + (r - 10).toString() + "," + (g - 10).toString() + "," + (b - 10).toString() + ") 30%," + 
-    "rgb(" + (r - 20).toString() + "," + (g- 20).toString() + "," + (b - 20).toString() + ") 50%," + 
-    "rgb(" + (r - 30).toString() + "," + (g - 30).toString() + "," + (b - 30).toString() + ") 70%," + 
-    "rgb(" + (r - 40).toString() + "," + (g - 40).toString() + "," + (b - 40).toString() + ") 90%)",
-  });
-  $(".dark-grad").css({"background": "-moz-linear-gradient(top," +  "rgb(" + themeColors.dark + ") 0%, " + 
-    "rgb(" + (r - 8).toString() + "," + (g - 73).toString() + "," + (b - 80).toString() + ") 30%," + 
-    "rgb(" + (r - 8).toString() + "," + (g- 73).toString() + "," + (b - 80).toString() + ") 30%," + 
-    "rgb(" + (r - 7).toString() + "," + (g - 88).toString() + "," + (b - 101).toString() + ") 49%," + 
-    "rgb(" + (r - 38).toString() + "," + (g - 91).toString() + "," + (b  -114).toString() + ") 100%)",
-  });
-
-  // .dark
-
-  r = themeColors.darkerGradArray[0];
-  g = themeColors.darkerGradArray[1];
-  b = themeColors.darkerGradArray[2];
-  console.log(themeColors.darkerGradArray);
-
-  $(".darker-grad").css({"background": "-webkit-linear-gradient(top," +  "rgb(" + themeColors.darker + ") 0%, " + 
-    "rgb(" + (r - 10).toString() + "," + (g - 10).toString() + "," + (b - 10).toString() + ") 30%," + 
-    "rgb(" + (r - 20).toString() + "," + (g- 20).toString() + "," + (b - 20).toString() + ") 50%," + 
-    "rgb(" + (r - 30).toString() + "," + (g - 30).toString() + "," + (b - 30).toString() + ") 70%," + 
-    "rgb(" + (r - 40).toString() + "," + (g - 40).toString() + "," + (b - 40).toString() + ") 90%)",
-  });
-  $(".darker-grad").css({"background": "-moz-linear-gradient(top," +  "rgb(" + themeColors.darker + ") 0%, " + 
-    "rgb(" + (r - 10).toString() + "," + (g - 10).toString() + "," + (b - 10).toString() + ") 80%," + 
-    "rgb(" + (r - 20).toString() + "," + (g- 20).toString() + "," + (b - 20).toString() + ") 90%," + 
-    "rgb(" + (r - 30).toString() + "," + (g - 30).toString() + "," + (b - 30).toString() + ") 95%," + 
-    "rgb(" + (r - 40).toString() + "," + (g - 40).toString() + "," + (b - 40).toString() + ") 100%)",
-  });
+    // -webkit Chrome10+,Safari5.1
+    $(gradHelper[counter].selector).css({"background": "-webkit-linear-gradient(top," +  "rgb(" + gradHelper[counter]["colors"] + ") 0%, " + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 30%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 30%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 49%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 100%)"
+    });
+    // -moz FF3.6+
+    $(gradHelper[counter].selector).css({"background": "-moz-linear-gradient(top," +  "rgb(" + gradHelper[counter]["colors"] + ") 0%, " + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 30%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 30%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 49%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 100%)"
+    });
+    // -o Opera 11.10+
+    $(gradHelper[counter].selector).css({"background": "-o-linear-gradient(top," +  "rgb(" + gradHelper[counter]["colors"] + ") 0%, " + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 30%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 30%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 49%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 100%)"
+    });
+    // -ms IE10+
+    $(gradHelper[counter].selector).css({"background": "-ms-linear-gradient(top," +  "rgb(" + gradHelper[counter]["colors"] + ") 0%, " + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 30%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 30%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 49%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 100%)"
+    });
+    // Chrome,Safari4+ TO DO: test
+    $(gradHelper[counter].selector).css({"background": "-webkit-gradient(linear, left top,, left bottom, color-stop( 0%, rgb(" + gradHelper[counter]["colors"] + ")), " + 
+    "color-stop(30%,rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + "))," + 
+    "color-stop(30%,rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + "))," + 
+    "color-stop(49%,rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + "))," + 
+    "color-stop(100%,rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + "))"
+    });
+    // -linear gradient W3C TO DO: test
+    $(gradHelper[counter].selector).css({"background": "linear-gradient(to bottom ," +  "rgb(" + gradHelper[counter]["colors"] + ") 0%, " + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 30%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 30%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 49%," + 
+    "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 100%)"
+    });
   
 
 
-
-     // background: -moz-linear-gradient(top,  #f2f288 0%, #e6e939 30%, #e6e939 30%, #e3ea24 49%, #b9cb17 100%); /* FF3.6+ */
-
-
-/***
-lighter
-89B4D8
-RGB: 137–180–216
-
-light
-5A90BC
-RGB: 90–144–188
-
-
-main
-3973A4
-RGB: 57–115–164
-
-dark
-206299
-RGB: 32–98–153
-
-darker
-104979
-
-RGB: 16–73–121
-
-***/
+    console.log(gradHelper[counter].selector);
+    console.log(r + "," + g + "," + b);
+  } // for
+ 
