@@ -16,6 +16,10 @@ header, nav, section, .page-wrapper, body {
     color: snow !important;
 }
 
+.txt-black {
+    color: rgba(10, 10, 10, 1) !important;
+}
+
 .txt-center {
     text-align: center;
 }
@@ -348,16 +352,12 @@ ul li {
     border-radius: 1%;
     padding: 30px;
 }
-/***********
-FOOTER
-***********/
+/***************
+.pop-box
+****************/
 
-footer {
-    width: 100%;
-    height: 100px;
-    background-color: lightgreen;
-    clear: both;
-    margin-top: 20px;
+.pop-box {
+    display: none;
 }
 
 

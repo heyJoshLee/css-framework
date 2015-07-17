@@ -1,6 +1,7 @@
 if ($("#page-wrapper").hasClass("useThemes")) {
   var themeColor =  $("#page-wrapper").attr("class").split(" ")[1].replace("theme-", "");
   var themeColorHex;
+  // change hex to RGB if hex is used
   if (themeColor[0] == "#") {
         function hexToRgb(hex) {
         // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
@@ -40,16 +41,14 @@ if ($("#page-wrapper").hasClass("useThemes")) {
 
   }
 
-
+  // Add theme colors to divs
   $(".lighter").css("background-color", "rgb(" + themeColors.lighter + ")");
   $(".light").css("background-color", "rgb(" + themeColors.light + ")");
   $(".main").css("background-color", "rgb(" + themeColors.main + ")");
   $(".dark").css("background-color", "rgb(" + themeColors.dark + ")");
   $(".darker").css("background-color", "rgb(" + themeColors.darker + ")");
 
-
-} // If end
-
+  // make gradients 
   var gradHelper = [
                 {
                 selector: ".lighter-grad",
@@ -81,6 +80,7 @@ if ($("#page-wrapper").hasClass("useThemes")) {
   var sv = [10,20,30,40];
   var r, g, b;
   var counter = 0;
+  // loop to create gradients and browser prefixes
   for (counter; counter < gradHelper.length; counter += 1) {
     r = gradHelper[counter]["array"][0];
     g = gradHelper[counter]["array"][1];
@@ -128,10 +128,11 @@ if ($("#page-wrapper").hasClass("useThemes")) {
     "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 49%," + 
     "rgb(" + (r - sv[0]).toString() + "," + (g - sv[1]).toString() + "," + (b - sv[2]).toString() + ") 100%)"
     });
-  
 
+  } // for end
+} // If end checking if has useThemes
 
-    console.log(gradHelper[counter].selector);
-    console.log(r + "," + g + "," + b);
-  } // for
- 
+$(".pop-launch").on("click", function() {
+  console.log("clicked");
+  $(this +  " > .pop-box").fadeIn();
+});
