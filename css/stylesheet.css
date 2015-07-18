@@ -357,6 +357,19 @@ ul li {
 
 .pop-box {
     display: none;
+    position: fixed;
+    margin: 4% auto;
+    width: 80%;
+    height: 90%;
+    left: 10%;
+    top: 0%;
+}
+
+.pop-box-close {
+    position: fixed;
+    margin-left: 27rem;
+    left: 10%;
+    top: 0%;
 }
 
 

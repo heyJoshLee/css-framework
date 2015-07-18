@@ -134,5 +134,14 @@ if ($("#page-wrapper").hasClass("useThemes")) {
 
 $(".pop-launch").on("click", function() {
   console.log("clicked");
-  $(this +  " > .pop-box").fadeIn();
+  $(this).children(".pop-box:first").fadeIn();
 });
+
+$(".pop-box").append("<span class='pop-box-close'>X</span>");
+
+
+
+
+
+
+
