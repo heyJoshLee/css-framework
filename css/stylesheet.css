@@ -366,10 +366,10 @@ ul li {
 }
 
 .pop-box-close {
-    position: fixed;
-    margin-left: 27rem;
-    left: 10%;
-    top: 0%;
+    position: relative;
+    float: right;
+    margin-right: 5px; 
+    top: -18%;
 }
 
 
