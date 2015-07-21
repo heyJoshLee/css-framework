@@ -10,7 +10,6 @@ header, nav, section, .page-wrapper, body {
 }
 
 
-
 .break {
     display: block;
     margin-bottom: 10px;
@@ -18,6 +17,10 @@ header, nav, section, .page-wrapper, body {
 
 .div-center {
     margin: 0 auto;
+}
+
+.no-break {
+    position: inline;
 }
 
 
@@ -298,6 +301,8 @@ input[type="text"] {
     background-color: snow;
     height: 30px;
     width: 50%;
+    display: block;
+
 }
 
 textarea {
@@ -312,7 +317,6 @@ textarea {
 
 form input,
 form textarea {
-    display: block;
     margin: 0 auto 10px;
     border: none;
 }
